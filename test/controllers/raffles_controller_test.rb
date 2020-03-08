@@ -1,9 +1,8 @@
 require 'test_helper'
 
 class RafflesControllerTest < ActionDispatch::IntegrationTest
-  test "should get index" do
-    get raffles_index_url
+  test "should respond to root url" do
+    get root_url
     assert_response :success
   end
-
 end
