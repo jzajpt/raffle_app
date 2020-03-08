@@ -1,6 +1,7 @@
 class Participant < ApplicationRecord
   belongs_to :raffle
 
+  validates :raffle_id, presence: true
   validates :email,
     presence: true,
     length: { maximum: 255 },

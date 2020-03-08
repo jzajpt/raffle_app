@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RaffleApp</title>
+    <title>Raffle App</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -12,7 +12,10 @@
 
   <body class="bg-light">
     <div class="container">
-        <%= yield %>
+      <%= yield %>
+      <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">© 2020 Jiri Zajpt</p>
+      </footer>
     </div>
   </body>
 </html>

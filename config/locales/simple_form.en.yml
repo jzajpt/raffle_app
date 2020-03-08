@@ -10,8 +10,11 @@ en:
       # html: '<abbr title="required">*</abbr>'
     error_notification:
       default_message: "Please review the problems below:"
+    labels:
+      participant:
+        email: 'Enter your email'
+        raffle_id: 'Select raffle you wish to enter'
     # Examples
-    # labels:
     #   defaults:
     #     password: 'Password'
     #   user:

@@ -1,13 +1,15 @@
 <div class="py-5 text-center">
   <h2>Raffle!</h2>
   <p class="lead">Welcome to Raffle App! Please select raffle you want to
-  enter below and enter your email address to get a chance to win!</p>
+  enter and enter your email address to get a chance to win!</p>
 </div>
-<main role="main" class="inner cover">
+<main role="main">
   <%= simple_form_for @participant, url: raffle_entries_path do |f| %>
-    <%= f.input :raffle_id, collection: all_valid_raffles, prompt: true %>
     <%= f.input :email %>
+    <%= f.input :raffle_id, collection: all_valid_raffles, prompt: true,
+      error: "Please select raffle"%>
     <hr class="mb-4">
-    <%= f.button :submit, "Enter raffle!", class: 'btn-primary btn-block btn-lg' %>
+    <%= f.button :submit, "Enter raffle!", class: 'btn-primary btn-block btn-lg',
+          data: { "disable-with": "Entering..." }%>
   <% end %>
 </main>
