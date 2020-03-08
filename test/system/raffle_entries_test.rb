@@ -7,8 +7,8 @@ class RaffleEntriesTest < ApplicationSystemTestCase
 
   test "First submission - odds are 100%" do
     visit root_url
-    select "Win a fancy dinner", from: "Raffle"
-    fill_in "Email", with: "joedoe@gmail.com"
+    select "Win a fancy dinner", from: "Select raffle you wish to enter"
+    fill_in "Enter your email", with: "joedoe@gmail.com"
     click_on "Enter raffle!"
 
     assert_text "Thanks for signing up"
@@ -19,8 +19,8 @@ class RaffleEntriesTest < ApplicationSystemTestCase
     create :participant, raffle: @raffle
 
     visit root_url
-    select "Win a fancy dinner", from: "Raffle"
-    fill_in "Email", with: "janedoe@gmail.com"
+    select "Win a fancy dinner", from: "Select raffle you wish to enter"
+    fill_in "Enter your email", with: "janedoe@gmail.com"
     click_on "Enter raffle!"
 
     assert_text "Thanks for signing up"
