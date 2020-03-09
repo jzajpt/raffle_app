@@ -1,5 +1,5 @@
 class Participant < ApplicationRecord
-  belongs_to :raffle
+  belongs_to :raffle, counter_cache: true
 
   validates :raffle_id, presence: true
   validates :email,
